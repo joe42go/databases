@@ -1,0 +1,83 @@
+1)
+
+     "A Clockwork Orange" : String
+     42 :  Integer
+     09/02/1945 : Date
+     98.7: Float
+     $15.99: Float
+
+ 2) Databases are used to store larger amount of data that can be quickly read and modified. Databases are not readable by humans, therefore, use text files when the document needs to be read by humans.
+
+ 3) Unlike other other languages, SQL is declarative and not procedural so you say what you want without having to say how to do it or specify exact steps.
+
+ 4) Databases are organized into tables that consists of columns and rows. Each row contains the data pertaining to an entry while the columns define what the data represent.
+
+ 5)
+       Table: A database table is composed of records and fields that hold data.
+       Row:  The set of fields within a table that are relevant to a specific entity
+       Column: A set of data values of a particular simple type
+       Value: data contained in a cell
+
+ 6) Numeric, date, character
+
+ 7)
+   a) This query selects the dates with corresponding amounts from the payments table
+
+	Output:
+
+	| date                     | amount    |
+	| ------------------------ | --------- |
+	| 2016-05-01T00:00:00.000Z | 1500.0000 |
+	| 2016-05-10T00:00:00.000Z | 37.0000   |
+	| 2016-05-15T00:00:00.000Z | 124.9300  |
+	| 2016-05-23T00:00:00.000Z | 54.7200   |
+
+  b)  This query ask for amounts that are higher than 500 from the payments table
+
+  Output:
+
+     amount
+       1500.0000
+
+   c) This query selects all the columns available where the payee is Mega Foods
+
+   Output:
+date                      payee        amount       memo
+2016-05-15T00:00:00.000Z  Mega Foods  124.9300     Groceries
+
+
+ 8)
+
+   a)
+
+	SELECT email, signup
+	FROM users
+	WHERE name = 'DeAndre Data';
+
+  Output:
+
+email                    signup
+datad@comcast.net     2008-01-20T00:00:00.000Z
+
+
+   b)
+
+	SELECT userid
+	FROM users
+	WHERE email = 'aleesia.algorithm@uw.edu';
+
+  Output:
+
+   userid
+     1
+
+  c)
+
+	SELECT *
+	FROM users
+	WHERE userid = 4;
+
+  Output:
+
+userid  name              email                   signup
+  4     Brandy Boolean bboolean@nasa.gov 1999-10-15T00:00:00.000Z
